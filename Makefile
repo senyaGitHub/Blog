@@ -9,4 +9,4 @@ test:
 	cargo test
 
 docker-build:
-	docker build -t my-rust-app .
+	sudo docker build -t something .
