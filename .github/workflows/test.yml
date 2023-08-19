@@ -20,9 +20,6 @@ jobs:
         with:
           tool: zola@0.17.1
           
-      - name: Build with Zola
-        run: zola build
-
       - name: Run Zola Server
         run: zola serve --interface 127.0.0.1 --port 4000
 
