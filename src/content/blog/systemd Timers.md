@@ -1,7 +1,7 @@
 +++
 date = 2017-09-23
 weight = 1
-title = "Timers are systemd unit files whose name ends in _.timer_ that control _.service_ files or events. Timers have built-in support for calendar time events, monotonic time events, and can be run asynchronously."
+title = "systemd Timers."
 +++
 
 
@@ -35,9 +35,9 @@ For general use case [[systemd 16.09.23]].
 - Create service `sudo vim /etc/systemd/system/update.service`
 - The this code inside 
 	```
-	[Unit] Description=Automated OS Update `
-	[Service] ExecStart=/usr/bin/apt-get update && /usr/bin/apt-get dist-upgrade -y `
-	Type=oneshot`
+	[Unit] Description=Automated OS Update 
+	[Service] ExecStart=/usr/bin/apt-get update && /usr/bin/apt-get dist-upgrade -y 
+	Type=oneshot
 	[Install] WantedBy=multi-user.target
 	```
 - Create timer and reference service `sudo vim /etc/systemd/system/update.timer`
