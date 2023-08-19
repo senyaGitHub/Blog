@@ -16,8 +16,6 @@ jobs:
       - name: Set up Rust
         uses: actions-rust-lang/setup-rust-toolchain@v1
 
-      - name: Install Zola
-        run: cargo install zola
 
       - name: Build with Zola
         run: zola build
