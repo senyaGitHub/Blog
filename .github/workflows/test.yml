@@ -2,21 +2,30 @@ name: test
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
-env:
-  CARGO_TERM_COLOR: always
+    branches:
+      - features 
 
 jobs:
-  build:
-
+  build-test:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Build
-      run: cargo build --verbose
-    - name: Run tests
-      run: cargo test --verbose
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Rust
+        uses: actions/setup-rust@v2
+
+      - name: Install Zola
+        run: cargo install zola
+
+      - name: Build with Zola
+        run: zola build
+
+      - name: Run Zola Server
+        run: zola serve --interface 127.0.0.1 --port 4000
+
+      - name: Test Zola Build
+        run: |
+          sleep 5  # Wait for the server to start
+          curl http://127.0.0.1:4000/tests/test.html  # Change URL to match your test page
