@@ -22,8 +22,8 @@ jobs:
           
       - name: Run Zola Server
         run: |
-        cd src
-        zola serve --interface 127.0.0.1 --port 4000 
+          cd src
+          zola serve --interface 127.0.0.1 --port 4000 
 
       - name: Test Zola Build
         run: |
