@@ -2,3 +2,5 @@
 publish = "public"
 command = "zola build"
 
+[build.environment]
+    ZOLA_VERSION = "0.17.1"
