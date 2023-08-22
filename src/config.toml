@@ -1,5 +1,5 @@
 base_url = "https://senyablog.netlify.app/"
-description = "Arsenii's blog sire build with zola"
+description = "Arsenii's blog site build with zola"
 compile_sass = false
 minify_html = true
 generate_feed = true
@@ -12,7 +12,7 @@ taxonomies = [
 
 [languages.en]
 weight = 1
-title = "anemone"
+title = "Senya Blog"
 languageName = "English"
 languageCode = "en"
 relativeURL = false
