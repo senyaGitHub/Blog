@@ -25,11 +25,11 @@
 }
 
 :root.dark {
-    --bgColor: #222529;
-    --fgColor: #D6D6D6;
-    --metaColor: #78B6AD;
+    --bgColor: #232136;
+    --fgColor: #e0def4;
+    --metaColor: #eb6f92;
     --headColor: #;
-    --linkColor: #DBD5BC;
+    --linkColor: #eb6f92;
     --hovColor: #E2AEA2;
     --bgSelect: #464949;
     --bgUrl: url(https://i.ibb.co/LzrFBFJ/tileDark.webp) repeat;

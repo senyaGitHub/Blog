@@ -3,7 +3,8 @@
 
 ## Recent Blog Posts
 
-- 👨‍💻 [Systemd Timers](./blog/systemd-timers/)
+- 👨‍💻 [Makefile](./blog/makefile/)
+
 
 
 ## Online Presence
