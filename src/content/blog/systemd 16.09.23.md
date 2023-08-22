@@ -1,6 +1,6 @@
 +++
-title = "	Notes on Using Systemctl"
-date = 2017-09-23
+title = "systemctl"
+date = 2023-09-16
 weight = 1
 +++
 
