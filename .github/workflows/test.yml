@@ -51,7 +51,6 @@ jobs:
       - name: Run Zola Server
         run: |
           docker run -p 8080:8080 ghcr.io/senyagithub/zola:0.8
-  
 
       - name: Test Zola Build with Latest Docker Image
         run: |
