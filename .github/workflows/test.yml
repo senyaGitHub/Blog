@@ -45,11 +45,12 @@ jobs:
 
       - name: Pull Latest Docker Image
         run: |
+          docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.CR_PAT }}
           docker pull ghcr.io/senyagithub/zola:0.1  
 
       - name: Run Zola Server
         run: |
-          docker run -v /app/public -p 8080:8080 docker.pkg.github.com/your-username/your-repo/your-image-name:latest
+          docker run -v /app/public -p 8080:8080 ghcr.io/senyagithub/zola:0.1  
 
       - name: Test Zola Build with Latest Docker Image
         run: |
