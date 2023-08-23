@@ -6,7 +6,7 @@ on:
       - features 
 
 jobs:
-  build-test-0.17.1:
+  build-test-0-17-1:
     runs-on: ubuntu-latest
 
     steps:
@@ -36,7 +36,7 @@ jobs:
             exit 1
           fi
   
-  test-with-docker-zola-0.17.2-r0:
+  test-with-docker-zola-0-17-2-r0:
     runs-on: ubuntu-latest
 
     steps:
