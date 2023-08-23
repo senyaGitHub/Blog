@@ -52,3 +52,5 @@ en = { name = "/about/", url = "/about" }
 [[extra.header_nav]]
 en = { name = "/blog/", url = "/blog" }
 
+[server]
+interface = "0.0.0.0"

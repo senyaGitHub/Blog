@@ -1,13 +1,15 @@
 FROM alpine:latest
 
 RUN apk add zola
-# Get the version of Zola
-RUN apk info -vv | grep -E 'zola'
 
 WORKDIR /app
 
-COPY . /app
+COPY src /app
 
-CMD ["zola", "build"]
+# Expose the port that Zola will listen on
+EXPOSE 8080
 
-VOLUME /app/public
+# Configure Zola to listen on all available network interfaces
+
+# Command to run when the container starts
+CMD ["zola", "serve", "--interface", "0.0.0.0", "--port", "8080"]

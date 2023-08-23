@@ -46,16 +46,17 @@ jobs:
       - name: Pull Latest Docker Image
         run: |
           echo "${{ secrets.DOCKER_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-          docker pull ghcr.io/senyagithub/zola:0.1  
+          docker pull ghcr.io/senyagithub/zola:0.8 
 
       - name: Run Zola Server
         run: |
-          docker run -v /app/public -p 8080:8080 ghcr.io/senyagithub/zola:0.1  
+          docker run -p 8080:8080 ghcr.io/senyagithub/zola:0.8
+  
 
       - name: Test Zola Build with Latest Docker Image
         run: |
           sleep 5  # Wait for the server to start
-          response=$(curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1:4000/test)
+          response=$(curl -s -o /dev/null -w "%{http_code}" http://0.0.0.0:8080/test)
           if [ "$response" = "200" ]; then
             echo "Test successful: Page found"
           else
