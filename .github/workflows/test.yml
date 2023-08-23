@@ -43,17 +43,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up Rust
-        uses: actions-rust/setup-rust-toolchain@v1
-
       - name: Pull Latest Docker Image
         run: |
           docker pull ghcr.io/senyagithub/zola:0.1  
 
       - name: Run Zola Server
         run: |
-          cd src
-          zola serve --interface 127.0.0.1 --port 4000 &
+          docker run -v /app/public -p 8080:8080 docker.pkg.github.com/your-username/your-repo/your-image-name:latest
 
       - name: Test Zola Build with Latest Docker Image
         run: |
