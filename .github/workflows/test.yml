@@ -45,7 +45,7 @@ jobs:
 
       - name: Pull Latest Docker Image
         run: |
-          echo "${{ secrets.CR_PAT }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+          echo "${{ secrets.DOCKER_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
           docker pull ghcr.io/senyagithub/zola:0.1  
 
       - name: Run Zola Server
