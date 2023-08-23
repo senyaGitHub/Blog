@@ -6,7 +6,7 @@ on:
       - features 
 
 jobs:
-  build-test:
+  build-test-0-17-1:
     runs-on: ubuntu-latest
 
     steps:
@@ -28,4 +28,66 @@ jobs:
       - name: Test Zola Build
         run: |
           sleep 5  # Wait for the server to start
-          curl http://127.0.0.1:4000/tests/test.html  # Change URL to match your test page
+          response=$(curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1:4000/test)
+          if [ "$response" = "200" ]; then
+            echo "Test successful: Page found"
+          else
+            echo "Test failed: Page not found"
+            exit 1
+          fi
+  
+  test-with-docker-zola-0-17-2-r0:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Pull Latest Docker Image
+        run: |
+          echo "${{ secrets.DOCKER_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+          docker pull ghcr.io/senyagithub/zola:0.8 
+
+      - name: Run Zola Server
+        run: |
+          docker run -p 8080:8080 ghcr.io/senyagithub/zola:0.8 &
+
+      - name: Test Zola Build with Latest Docker Image
+        run: |
+          sleep 5  # Wait for the server to start
+          response=$(curl -s -o /dev/null -w "%{http_code}" http://0.0.0.0:8080/test)
+          if [ "$response" = "200" ]; then
+            echo "Test successful: Page found"
+          else
+            echo "Test failed: Page not found"
+            exit 1
+          fi
+  build-test-latest:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Rust
+        uses: actions-rust-lang/setup-rust-toolchain@v1
+
+      - uses: taiki-e/install-action@v2
+        with:
+          tool: zola
+          
+      - name: Run Zola Server
+        run: |
+          cd src
+          zola serve --interface 127.0.0.1 --port 4000 &
+
+      - name: Test Zola Build
+        run: |
+          sleep 5  # Wait for the server to start
+          response=$(curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1:4000/test)
+          if [ "$response" = "200" ]; then
+            echo "Test successful: Page found"
+          else
+            echo "Test failed: Page not found"
+            exit 1
+          fi
