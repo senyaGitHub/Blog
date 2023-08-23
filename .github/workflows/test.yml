@@ -50,7 +50,7 @@ jobs:
 
       - name: Run Zola Server
         run: |
-          docker run -v /app/public -p 8080:8080 ghcr.io/senyagithub/zola:0.1  
+          docker run -v /app/src -p 8080:8080 ghcr.io/senyagithub/zola:0.1  
 
       - name: Test Zola Build with Latest Docker Image
         run: |
