@@ -21,7 +21,7 @@ title = "systemd timers"
 	systemd-analyze calendar "*-*-* 09..17:00/5"
 	systemd-analyze calendar "Mon..Fri *-*-* 09..17:00/5"
 ```
-## Creating Timer event
+# Creating Timer event
 - Create a timer unit file `sudo systemctl edit --full --force [NAME].timer`
 -  Edit the file.
 - Create an associated service unit file `sudo systemctl edit --full --force [NAME].service`
@@ -31,7 +31,7 @@ title = "systemd timers"
 - Troubleshoot any issues. Look in the system journal to see if everything is OK ``journalctl --follow``
 - Make script executable `chmod a+x ~/journo.sh`
 
-## Updates by Timer for Debian
+# Updates by Timer for Debian
 - Create service `sudo vim /etc/systemd/system/update.service`
 - The this code inside 
 	```
