@@ -2,10 +2,10 @@
 title = "About"
 +++
 
-I'm Arsenii, a dedicated software enthusiast with a primary focus on cybersecurity and low level coding. Currently studying for a Foundational Diploma in IT, I'm committed to expanding my knowledge and experience in the tech world.
+I'm Arsenii, a dedicated software enthusiast with a primary focus on cybersecurity and low level coding. Currently studying for a Diploma in IT.
 
-I know Python well also familiar with C, Rust and Lua. .
 
-I'm invested in the development of embedded systems such as Arduino, Raspberry Pi, and Flipper Zero. Also interested in penetration testing. 
+I know some Python, C and Lua. Currently studying Rust. I love single-board computers, e.g. Raspberry Pi, Arduino or Flipper Zero.  
 
 Feel free to reach out.
+
