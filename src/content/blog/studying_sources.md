@@ -15,10 +15,11 @@ weight = 1
 - [CS50AI](https://pll.harvard.edu/course/cs50s-introduction-artificial-intelligence-python/2023-05) - An Introduction to AI with Python by Harvard.
 - [CS50P](https://pll.harvard.edu/course/cs50s-introduction-programming-python/2023-05) - An introduction to python development by Harvard.
 - [suckless](https://suckless.org/) - A community-driven project that develops minimalist software tools and utilities.
+- [POSIX Manual](https://www.gnu.org/software/guile/manual/html_node/POSIX.html) - GNU POSIX manual
 - [docs.kernel.org](https://docs.kernel.org/#) - This website provides documentation for the Linux kernel.
 - [OSDev Wiki](https://wiki.osdev.org/Tutorials) - This website provides tutorials and resources for operating system development.
 
-# Here are some other interesting websites:
+# Here are some websites for finding research papers:
 
 - [scholar.google.com](http://scholar.google.com/) - This website is great for finding PDFs related to various subjects.
 - [pubmed.ncbi.nlm.nih.gov](http://pubmed.ncbi.nlm.nih.gov/) - If you are looking for medical research, this website is a valuable resource.
