@@ -19,7 +19,7 @@ weight = 1
 - [docs.kernel.org](https://docs.kernel.org/#) - This website provides documentation for the Linux kernel.
 - [OSDev Wiki](https://wiki.osdev.org/Tutorials) - This website provides tutorials and resources for operating system development.
 
-# Here are some websites for finding research papers:
+# Here are some others cool websites:
 
 - [scholar.google.com](http://scholar.google.com/) - This website is great for finding PDFs related to various subjects.
 - [pubmed.ncbi.nlm.nih.gov](http://pubmed.ncbi.nlm.nih.gov/) - If you are looking for medical research, this website is a valuable resource.
