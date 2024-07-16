@@ -1,18 +1,16 @@
 base_url = "https://senyablog.netlify.app/"
-description = "Arsenii's blog site build with zola"
+description = "blog site build with zola"
 compile_sass = false
 minify_html = true
 generate_feed = true
 
 default_language = "en"
 
-taxonomies = [
-    {name = "tags", feed = true},
-]
+taxonomies = [{ name = "tags", feed = true }]
 
 [languages.en]
 weight = 1
-title = "Senya Blog"
+title = "Blog"
 languageName = "English"
 languageCode = "en"
 relativeURL = false
@@ -48,9 +46,11 @@ en = { name = "/home/", url = "/" }
 en = { name = "/about/", url = "/about" }
 
 
-
 [[extra.header_nav]]
 en = { name = "/blog/", url = "/blog" }
+
+[[extra.header_nav]]
+en = { name = "/resources/", url = "/resources" }
 
 [server]
 interface = "0.0.0.0"
